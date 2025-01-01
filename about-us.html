@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমারটাপ - আমাদের সম্পর্কে</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Noto Serif Bengali', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+            color: #333;
+            overflow: hidden; /* Prevent scroll during loading */
+        }
+        /* Loading Screen Styles */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 24px;
+            color: #0288d1;
+            font-weight: bold;
+            text-align: center;
+        }
+        .loading-overlay .spinner {
+            border: 4px solid transparent;
+            border-top: 4px solid #0288d1;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Blurring the Website Content */
+        .blurred {
+            filter: blur(5px);
+        }
+
+        header {
+            text-align: center;
+            background-color: #0288d1;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header img {
+            max-width: 200px;
+            background-color: white; /* White background for logo visibility */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .content {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 700px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+            color: #0288d1;
+        }
+
+        .about-us-section {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .about-us-section h3 {
+            margin-top: 20px;
+            color: #0288d1;
+        }
+
+        .about-us-section p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        /* Color Grading for Sections */
+        .goal-section {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-section {
+            background-color: #f1f8e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .terms-section {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .owner-section {
+            margin-top: 40px;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .owner-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .owner-section h3 {
+            margin-bottom: 10px;
+            color: #0288d1;
+        }
+
+        .owner-section p {
+            font-size: 16px;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #424242;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer .menu {
+            margin: 15px 0;
+        }
+
+        footer .menu a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Email Section */
+        .contact-email {
+            background-color: #0288d1;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .contact-email a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p>লোড হচ্ছে...</p>
+</div>
+
+<header>
+    <img src="https://tap-pi.vercel.app/title.png" alt="Amartap">
+</header>
+
+<div class="content blurred" id="content">
+    <h2>আমাদের সম্পর্কে</h2>
+
+    <div class="goal-section">
+        <h3>আমাদের লক্ষ্য</h3>
+        <p>আমরা amartap.com একটি সাইট যা প্রতিদিন ১০০০ র‍্যান্ডম মানুষকে ৳২০ মোবাইল রিচার্জ ফ্রি প্রদান করে। আমাদের উদ্দেশ্য হলো মানুষের জীবনে একটু সহজতা আনা এবং তাদের মোবাইল রিচার্জের ব্যয় কমানোর জন্য সাহায্য করা।</p>
+    </div>
+
+    <div class="privacy-section">
+        <h3>গোপনীয়তা নীতি</h3>
+        <p>আমরা আপনার নাম, ফোন নম্বর বা ইমেল কোনভাবেই অন্য কারো সাথে শেয়ার করি না। আমাদের সকল তথ্য এন্ড-টু-এন্ড এনক্রিপ্টেড থাকে, যার মাধ্যমে আপনার তথ্য নিরাপদ থাকে।</p>
+    </div>
+
+    <div class="terms-section">
+        <h3>শর্তাবলী</h3>
+        <p>প্রতিদিন সর্বোচ্চ ১০০০ র‍্যান্ডম মানুষ ৳২০ পর্যন্ত মোবাইল রিচার্জ পাবে। এক ব্যক্তি একদিন একবারই রিচার্জ পাবেন।</p>
+    </div>
+
+    <div class="owner-section">
+        <h3>ওয়েবসাইটের মালিক</h3>
+        <img src="https://tap-pi.vercel.app/rakib.png" alt="Minhaz Hasan (Rakib)">
+        <p><strong>নাম:</strong> মিনহাজ হাসান (রাকিব)</p>
+        <p><strong>বয়স:</strong> ১৭</p>
+        <p><strong>পেশা:</strong> গাজীপুর কেয়ার মেডিক্যাল কর্মী</p>
+        <p><strong>ঠিকানা:</strong> গাজীপুর, ঢাকা, বাংলাদেশ</p>
+        <p><strong>শিক্ষাগত যোগ্যতা:</strong> ৮ম শ্রেণী পাস</p>
+        <p><strong>দক্ষতা:</strong> ওয়েবসাইট ডেভেলপার এবং ডিজাইনার, গ্রাফিক ডিজাইনার, সফটওয়্যার ডেভেলপার, কন্টেন্ট ক্রিয়েটর (YouTube), কোডিং দক্ষতা (PHP, HTML, CSS, JS, PYTHON)</p>
+        <p><strong>ব্যক্তিগত ইমেল:</strong> <a href="mailto:minhazhasanrakib16@gmail.com">minhazhasanrakib16@gmail.com</a></p>
+    </div>
+
+    <!-- Contact Email Section -->
+    <div class="contact-email">
+        <p>যোগাযোগের জন্য ইমেল করুন: <a href="mailto:help@amartap.com">help@amartap.com</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Amartap.com All Rights Reserved</p>
+    <div class="menu">
+        <a href="https://amartap.com/about-us.html">আমরা কে?</a>
+    </div>
+</footer>
+
+<script>
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const content = document.getElementById('content');
+
+    window.addEventListener('load', () => {
+        // Hide loading overlay and remove blur from content
+        loadingOverlay.style.display = 'none';
+        content.classList.remove('blurred');
+        document.body.style.overflow = 'auto'; // Enable scrolling after load
+    });
+</script>
+
+</body>
+</html>
