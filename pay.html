@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amartap</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #f7f7f7, #e3e3e3);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: white;
+            padding: 20px 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-width: 180px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .thumbnail {
+            margin: 20px auto;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumbnail img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        video {
+            display: none;
+            margin: 20px auto 0;
+            width: 90%;
+            max-width: 600px;
+            aspect-ratio: 16 / 9;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            transform: scale(1.05);
+        }
+
+        .highlight {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .leaderboard {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(45deg, #ffe0b2, #ffc107);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .leaderboard-item {
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background: linear-gradient(to right, #333, #444);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-icon img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="https://www.amartap.com/">
+        <img src="https://www.amartap.com/title.webp" alt="Amartap Logo">
+    </a>
+</header>
+
+<div class="container">
+    <div class="thumbnail" onclick="showVideo()">
+        <img src="https://www.amartap.com/promo.webp" alt="Promo Thumbnail">
+    </div>
+
+    <video id="promoVideo" controls>
+        <source src="https://d3v55qvjb2v012.cloudfront.net/gyZU/2025/01/01/13/29/cTVVIUneY3k/sc.mp4?srcid=cTVVIUneY3k&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kM3Y1NXF2amIydjAxMi5jbG91ZGZyb250Lm5ldC9neVpVLzIwMjUvMDEvMDEvMTMvMjkvY1RWVklVbmVZM2svc2MubXA0P3NyY2lkPWNUVlZJVW5lWTNrIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzM1ODI0Nzg1fX19XX0_&Signature=SGJ83lIkyN6wI02fTMijMFcjOdxKn1Inhh6gyvT3jB4iqsDdLTm0NNfcaY~f2AyGmEVkxf1grBuvyOeGRQysZMwMzVPv9Bn9uTtl2HmB5u5alaL2gP96IXrU6-3Hrp4SDdtNLSLiGy~GCdRlE7YrAS~kSPOjDDcqhvNcH~peBmg_&Key-Pair-Id=APKAI4E2RN57D46ONMEQ" type="video/mp4">
+        আপনার ব্রাউজার ভিডিও প্লে করতে পারছে না।
+    </video>
+
+    <a href="https://earnlinks.in/TAPCOM" class="cta-button">আবেদন করুন</a>
+    <div class="highlight">আজকে আবেদন করেছেন: ৬২২ জন</div>
+
+    <div class="leaderboard" id="leaderboard"></div>
+</div>
+
+<footer>
+    <p>© 2025 Amartap.com All Rights Reserved</p>
+    <a href="https://amartap.com/about-us.html">আমরা কে</a>
+</footer>
+
+<a href="https://wa.me/8801938199879" class="whatsapp-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+    const leaderboardData = [
+        "সাকিব", "তাসনুভা", "মাহি", "সোহান", "রিয়াজ", "রুমানা", "মারুফ"
+    ];
+
+    function populateLeaderboard() {
+        const leaderboard = document.getElementById("leaderboard");
+        leaderboardData.forEach(name => {
+            const div = document.createElement("div");
+            div.className = "leaderboard-item";
+            div.innerText = `${name} ৳২০ রিচার্জ পেয়েছেন`;
+            leaderboard.appendChild(div);
+        });
+    }
+
+    function showVideo() {
+        const video = document.getElementById('promoVideo');
+        video.style.display = 'block';
+        video.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    populateLeaderboard();
+</script>
+</body>
+</html>
